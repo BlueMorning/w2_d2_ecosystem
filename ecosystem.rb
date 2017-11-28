@@ -17,4 +17,13 @@ class Ecosystem
       @bears[Random.new.rand(0..(@bears.length-1))].eat_a_fish_from_river(@river)
     end
   end
+
+  def get_all_fish_eaten_from_bears
+    eaten_fish = []
+    for bear in @bears
+      eaten_fish.concat(bear.eaten_fish)
+    end
+    return eaten_fish
+  end
+
 end

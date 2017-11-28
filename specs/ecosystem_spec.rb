@@ -44,10 +44,14 @@ class TestEcosystem < Minitest::Test
     assert_equal(@bear1, @ecosystem.get_bear_by_name("Willis"))
   end
 
-
-  def test_bear_eat_all_the_fish
+  def test_bears_eat_all_the_fish
     @ecosystem.bear_eat_all_the_fish()
     assert_equal(0, @river.get_nb_fish())
+  end
+
+  def test_get_all_fish_eaten_from_bears
+    @ecosystem.bear_eat_all_the_fish()
+    assert_equal(5 ,@ecosystem.get_all_fish_eaten_from_bears().count())
   end
 
 
