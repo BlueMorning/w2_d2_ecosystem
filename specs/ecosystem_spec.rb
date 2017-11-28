@@ -1,11 +1,18 @@
 require ("minitest/autorun")
 require_relative("../ecosystem.rb")
 require_relative("../river.rb")
+require_relative("../bear.rb")
 
 
 class TestEcosystem < Minitest::Test
 
   def setup
+
+    @bear1 = Bear.new("Willis")
+    @bear2 = Bear.new("Vandamme")
+    @bear3 = Bear.new("Statham")
+
+
     @bears          = [@bear1, @bear2, @bear3]
     @fish           = [@fish1, @fish2, @fish3, @fish4, @fish5]
     @river_name     = "Amazon"
@@ -26,7 +33,9 @@ class TestEcosystem < Minitest::Test
     assert_equal(@river, @ecosystem.river)
   end
 
-
+  def test_get_bear_by_name
+    assert_equal(@bear1, @ecosystem.get_bear_by_name("Willis"))
+  end
 
 
 end
