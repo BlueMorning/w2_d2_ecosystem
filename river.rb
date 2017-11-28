@@ -4,7 +4,7 @@ class River
 
   def initialize(river_name, array_fish = [])
     @river_name = river_name
-    @fish = array_fish
+    @fish       = array_fish
   end
 
 
