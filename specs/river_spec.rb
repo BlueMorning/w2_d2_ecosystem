@@ -36,4 +36,9 @@ class TestRiver < Minitest::Test
     assert_equal(0, @river_empty.get_nb_fish)
   end
 
+  def test_repopulate_river
+    @river_empty.repopulate_river(10)
+    assert_equal(10, @river_empty.get_nb_fish())
+  end
+
 end
