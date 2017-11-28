@@ -16,7 +16,8 @@ class Bear
   end
 
   def eat_fish_by_name(river, fish_name)
-    @eaten_fish.push(river.remove_fish_by_name(fish_name))
+    fish = river.remove_fish_by_name(fish_name)
+    @eaten_fish.push(fish) if fish != nil
   end
 
 end

@@ -46,4 +46,9 @@ class TestBear < Minitest::Test
     assert_equal(true, (@bear.eaten_fish.select{|fish| fish.name == "Jaw"}).count() == 1)
   end
 
+  def test_eat_fish_by_name_not_existing
+    @bear.eat_fish_by_name(@river, "Jacky")
+    assert_equal(false, (@bear.eaten_fish.select{|fish| fish.name == "Jaw"}).count() == 1)
+  end
+
 end
