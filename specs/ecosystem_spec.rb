@@ -8,7 +8,8 @@ class TestEcosystem < Minitest::Test
   def setup
     @bears          = [@bear1, @bear2, @bear3]
     @fish           = [@fish1, @fish2, @fish3, @fish4, @fish5]
-    @river          = River.new("Amazon", @fish)
+    @river_name     = "Amazon"
+    @river          = River.new(@river_name, @fish)
     @ecosystem_name = "Canada"
     @ecosystem      = Ecosystem.new(@ecosystem_name, @bears, @river)
   end
@@ -19,6 +20,10 @@ class TestEcosystem < Minitest::Test
 
   def test_get_bears
     assert_equal(@bears, @ecosystem.bears)
+  end
+
+  def test_get_river
+    assert_equal(@river, @ecosystem.river)
   end
 
 
