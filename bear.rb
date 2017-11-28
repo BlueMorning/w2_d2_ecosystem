@@ -15,4 +15,8 @@ class Bear
     return @eaten_fish.count()
   end
 
+  def eat_fish_by_name(river, fish_name)
+    @eaten_fish.push(river.fish.select{|fish| fish.name == fish_name}.first())
+  end
+
 end
