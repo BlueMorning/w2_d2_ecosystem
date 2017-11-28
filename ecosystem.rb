@@ -1,8 +1,9 @@
 class Ecosystem
 
-  attr_reader :bears, :river
+  attr_reader :name, :bears, :river
 
-  def initialize(bears, river)
+  def initialize(name, bears, river)
+    @name  = name
     @bears = bears
     @river = river
   end
