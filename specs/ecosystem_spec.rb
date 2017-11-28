@@ -73,14 +73,14 @@ class TestEcosystem < Minitest::Test
     # The bear Willis eat 2 more fish
     willis = @ecosystem.get_bear_by_name("Willis")
     willis_nb_fish_eaten = willis.get_nb_eaten_fish()
-    willis.eat_fish_by_name(@river, "Neo")
-    willis.eat_fish_by_name(@river, "Speedy")
+    puts willis.grunt_yummy_when_eating_fish(@river, "Neo")
+    puts willis.grunt_yummy_when_eating_fish(@river, "Speedy")
     assert_equal(willis_nb_fish_eaten+2 ,willis.get_nb_eaten_fish())
 
     # The bear Torpedo eat 1 more fish
     torpedo = @ecosystem.get_bear_by_name("Vandamme")
     torpedo_nb_fish_eaten = torpedo.get_nb_eaten_fish()
-    torpedo.eat_fish_by_name(@river, "Turbo")
+    puts torpedo.grunt_yummy_when_eating_fish(@river, "Turbo")
     assert_equal(torpedo_nb_fish_eaten+1 ,torpedo.get_nb_eaten_fish())
 
     # The river had been repopulated with 999 fish before Willis and Torpedo eat 3 more fish

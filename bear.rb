@@ -18,6 +18,12 @@ class Bear
   def eat_fish_by_name(river, fish_name)
     fish = river.remove_fish_by_name(fish_name)
     @eaten_fish.push(fish) if fish != nil
+    return fish
+  end
+
+  def grunt_yummy_when_eating_fish(river, fish_name)
+    return "#{fish_name} yummy yummy !" if eat_fish_by_name(river, fish_name) != nil
+    return nil
   end
 
 end
