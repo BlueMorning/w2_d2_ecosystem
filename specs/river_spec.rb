@@ -18,6 +18,14 @@ class TestRiver < Minitest::Test
     assert_equal(@fish, @river.fish)
   end
 
+  def test_get_nb_fish
+    assert_equal(5, @river.get_nb_fish())
+  end
 
+  def test_remove_fish
+    fish_caught = @river.remove_fish()
+    assert_equal(@fish5, fish_caught)
+    assert_equal(4, @river.get_nb_fish)
+  end
 
 end

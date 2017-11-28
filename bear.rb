@@ -7,6 +7,9 @@ class Bear
     @eaten_fish = []
   end
 
+  def eat_a_fish_from_river(river)
+    @eaten_fish.push(river.fish.pop()) if river.fish.count() > 0 
+  end
 
 
 end

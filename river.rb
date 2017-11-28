@@ -7,7 +7,12 @@ class River
     @fish       = array_fish
   end
 
+  def remove_fish
+    return @fish.pop()
+  end
 
-
+  def get_nb_fish
+    return @fish.count()
+  end
 
 end

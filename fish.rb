@@ -6,6 +6,4 @@ class Fish
     @name = fish_name
   end
 
-
-
 end
