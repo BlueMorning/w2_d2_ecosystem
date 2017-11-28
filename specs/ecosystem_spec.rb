@@ -45,4 +45,10 @@ class TestEcosystem < Minitest::Test
   end
 
 
+  def test_bear_eat_all_the_fish
+    @ecosystem.bear_eat_all_the_fish()
+    assert_equal(0, @river.get_nb_fish())
+  end
+
+
 end
