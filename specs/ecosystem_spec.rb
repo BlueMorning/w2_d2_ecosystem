@@ -2,6 +2,7 @@ require ("minitest/autorun")
 require_relative("../ecosystem.rb")
 require_relative("../river.rb")
 require_relative("../bear.rb")
+require_relative("../fish.rb")
 
 
 class TestEcosystem < Minitest::Test
@@ -11,6 +12,12 @@ class TestEcosystem < Minitest::Test
     @bear1 = Bear.new("Willis")
     @bear2 = Bear.new("Vandamme")
     @bear3 = Bear.new("Statham")
+
+    @fish1 = Fish.new("Nemo")
+    @fish2 = Fish.new("Clown")
+    @fish3 = Fish.new("Jaw")
+    @fish4 = Fish.new("Hannibal")
+    @fish5 = Fish.new("Torpedo")
 
 
     @bears          = [@bear1, @bear2, @bear3]
