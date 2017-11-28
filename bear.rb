@@ -16,7 +16,7 @@ class Bear
   end
 
   def eat_fish_by_name(river, fish_name)
-    @eaten_fish.push(river.fish.select{|fish| fish.name == fish_name}.first())
+    @eaten_fish.push(river.remove_fish_by_name(fish_name))
   end
 
 end

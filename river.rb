@@ -14,6 +14,10 @@ class River
     return @fish.pop()
   end
 
+  def remove_fish_by_name(fish_name)
+    return @fish.delete(@fish.select{|fish| fish.name == fish_name}.first())
+  end
+
   def get_nb_fish
     return @fish.count()
   end
